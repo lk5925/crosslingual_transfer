@@ -11,6 +11,7 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 python run_clm.py \
 --logging_steps 100 \
 --do_train \
 --do_eval \
+--validation_split_percentage 5 \
 --fp16 true \
 --num_train_epochs 2 \
 --gradient_accumulation_steps 2 \
