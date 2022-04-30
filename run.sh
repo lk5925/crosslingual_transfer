@@ -8,11 +8,11 @@ CUDA_VISIBLE_DEVICES=4,5,6,7 python run_clm.py \
 --save_total_limit 10 \
 --report_to all \
 --logging_first_step \
---logging_steps 100 \
+--logging_steps 500 \
 --do_train \
 --do_eval \
 --validation_split_percentage 5 \
 --fp16 true \
---num_train_epochs 2 \
+--num_train_epochs 200 \
 --gradient_accumulation_steps 2 \
 --per_device_train_batch_size 16
