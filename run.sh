@@ -1,6 +1,8 @@
 CUDA_VISIBLE_DEVICES=0 python run_clm.py \
 --model_name_or_path gpt2 \
 --run_name wechsel-gpt2-ko \
+# --dataset_name oscar \
+# --dataset_config_name unshuffled_deduplicated_ko \
 --train_file ./kcbert-data/kcbert-data.txt \
 --output_dir ./wechsel-gpt2-ko \
 --evaluation_strategy steps \
