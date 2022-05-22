@@ -1,9 +1,12 @@
 CUDA_VISIBLE_DEVICES=0 python run_clm.py \
---model_name_or_path gpt2 \
+--model_name_or_path EleutherAI/gpt-neo-125M \
+--tokenizer_name ./MBBPE \
 --run_name wechsel-gpt2-ko \
 # --dataset_name oscar \
 # --dataset_config_name unshuffled_deduplicated_ko \
---train_file ./kcbert-data/kcbert-data.txt \
+# --train_file ./kcbert-data/kcbert-data.txt \
+--train_file \
+--validation_file \
 --output_dir ./wechsel-gpt2-ko \
 --evaluation_strategy steps \
 --overwrite_output_dir \
@@ -15,7 +18,7 @@ CUDA_VISIBLE_DEVICES=0 python run_clm.py \
 --logging_steps 1000 \
 --do_train \
 --do_eval \
---validation_split_percentage 5 \
+# --validation_split_percentage 5 \
 --load_best_model_at_end true \
 --metric_for_best_model ppl \
 --fp16 true \
